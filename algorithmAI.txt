@@ -1,0 +1,25 @@
+//Jorge Argamasilla Silvestre
+if(wordsFoundInText(messageReceived, ["Jorge Argamasilla", "Argamasilla Silvestre", "Cofundador de neuuni", "Fundador de neuuni"])){
+    processAI(prompts.Pjorge_argamasilla, messageReceived, msg.key.remoteJid);
+    //await sendMessageWTyping({ text: 'Jorge Argamasilla Silvestre CEO de Neuuni Universidad' }, msg.key.remoteJid);
+} else {
+    //Margarita Silvestre Oramas
+    if(wordsFoundInText(messageReceived, ["Margarita Silvestre", "Margarita Oramas", "Silvestre Oramas", "Rectora de Neuuni Universidad", "Fundadora de Neuuni Universidad"])){
+        processAI(prompts.Pmargarita_silvestre, messageReceived, msg.key.remoteJid);
+        //await sendMessageWTyping({ text: 'Dra. Margarita Silvestre Oramas CEO de Neuuni Universidad' }, msg.key.remoteJid);
+    } else {
+        //Jose Zilbertein Toruncha
+        if(wordsFoundInText(messageReceived, ["Jose Zilberstein", "Director de Neuuni", "Director actual de neuuni", "Jose Zilberstein Toruncha", "Jose Toruncha"])){
+            processAI(prompts.Pjose_zilberstein, messageReceived, msg.key.remoteJid);
+            //await sendMessageWTyping({ text: 'Dra. Margarita Silvestre Oramas CEO de Neuuni Universidad' }, msg.key.remoteJid); 
+        } else {
+            //Neuuni Universidad
+            if(wordsFoundInText(messageReceived, ["Neuuni", "Neuuni Universidad", "Universidad Neuuni"])){
+                processAI(prompts.Pneuuni_Universidad, messageReceived, msg.key.remoteJid);
+                //await sendMessageWTyping({ text: 'Text About Ne' }, msg.key.remoteJid);                                   
+            } else {
+                processAI('',messageReceived, msg.key.remoteJid);
+            }
+        }
+    }
+}                    
